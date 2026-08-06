@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type ="Application">
+		<Name>HPD Tools</Name>
+		<Assembly>HPDTool.dll</Assembly>
+		<FullClassName>HPDTool.AppCommand</FullClassName>
+		<AddInId>56E36B71-A318-40F5-8770-5E08ED939F57</AddInId>
+		<VendorId>Prasad Chavan</VendorId>
+		<VendorDescription>prasad.chavan@hpdglobal.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>
+
