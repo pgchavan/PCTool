@@ -1,0 +1,64 @@
+﻿<Window x:Class="HPDTool.UI.FamilySelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select Families"
+        Height="500"
+        Width="380"
+        WindowStartupLocation="CenterOwner">
+
+    <DockPanel Margin="10">
+
+        <!-- OK / Cancel -->
+        <StackPanel DockPanel.Dock="Bottom"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,10,0,0">
+            <Button Content="OK"
+                    Width="80"
+                    Margin="0,0,6,0"
+                    Click="Ok_Click"/>
+            <Button Content="Cancel"
+                    Width="80"
+                    Click="Cancel_Click"/>
+        </StackPanel>
+
+        <!-- Select buttons -->
+        <StackPanel DockPanel.Dock="Top"
+                    Orientation="Horizontal"
+                    Margin="0,0,0,8">
+            <Button Content="Select All"
+                    Width="80"
+                    Margin="0,0,6,0"
+                    Click="SelectAll_Click"/>
+            <Button Content="Select None"
+                    Width="90"
+                    Click="SelectNone_Click"/>
+        </StackPanel>
+
+        <!-- Search box -->
+        <TextBox x:Name="SearchBox"
+                 DockPanel.Dock="Top"
+                 Height="26"
+                 Margin="0,0,0,8"
+                 VerticalContentAlignment="Center"
+                 TextChanged="SearchBox_TextChanged"
+                 ToolTip="Search families by name"/>
+
+        <!-- Family list (fills remaining space) -->
+        <Border BorderBrush="#CCCCCC"
+                BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="FamilyList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Content="{Binding Name}"
+                                      IsChecked="{Binding IsSelected}"
+                                      Margin="4"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+    </DockPanel>
+</Window>

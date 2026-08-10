@@ -1,0 +1,14 @@
+﻿<Window x:Class="HPDTool.UI.TxtWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HPD Tools - Text Case Converter" Height="250" Width="300" ResizeMode="NoResize" Background="#FFF5F1F1">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Select Case Format:" Margin="0,0,0,10" FontWeight="Bold"/>
+            <Button Content="UPPER CASE" Click="UpperCase_Click" Margin="0,5"/>
+            <Button Content="lower case" Click="LowerCase_Click" Margin="0,5"/>
+            <Button Content="Each Word Capitalized" Click="TitleCase_Click" Margin="0,5"/>
+            <Button Content="Sentence capitalized" Click="SentenceCase_Click" Margin="0,5"/>
+        </StackPanel>
+    </Grid>
+</Window>

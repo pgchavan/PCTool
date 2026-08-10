@@ -1,0 +1,44 @@
+﻿<Window x:Class="HPDTool.UI.ParameterSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HPD Tools - Select By Parameter"
+        Height="260"
+        Width="400"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Parameter:"/>
+
+        <ComboBox x:Name="cmbParameters"
+                  Grid.Row="1"
+                  Margin="0,5,0,10"
+                  IsEditable="True"
+                  IsTextSearchEnabled="False"
+                  SelectionChanged="cmbParameters_SelectionChanged"
+                  KeyUp="cmbParameters_KeyUp"/>
+
+        <TextBlock Grid.Row="2" Text="Value:"/>
+
+        <ComboBox x:Name="cmbValues"
+                  Grid.Row="3"
+                  Margin="0,5,0,10"
+                  IsEditable="True"
+                  IsTextSearchEnabled="False"
+                  KeyUp="cmbValues_KeyUp"/>
+
+        <Button Grid.Row="4"
+                Content="Select"
+                Height="30"
+                Width="80"
+                HorizontalAlignment="Right"
+                Click="Select_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="HPDTool.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HPDTool"
+        mc:Ignorable="d"
+        Title="HPD Tools - Rotate Elements" Height="200" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Enter rotation angle (degrees):"/>
+            <TextBox x:Name="angleTextBox" Text="0" Margin="0,5"/>
+            <Button Content="Rotate" Click="button_run_Click" Margin="0,10" Padding="5"/>
+            <Button Content="Cancel" Click="button_close_Click" HorizontalAlignment="Right" Margin="0,5" Padding="5" Width="80"/>
+        </StackPanel>
+    </Grid>
+</Window>

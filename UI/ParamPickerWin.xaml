@@ -1,0 +1,39 @@
+﻿<Window x:Class="HPDTool.UI.ParamPickerWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HPD Tools - Select Parameters" Height="270" Width="500" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Choose (or type) parameters to receive Easting, Northing, and Elevation:" FontSize="14" TextWrapping="Wrap"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="Easting parameter:"/>
+        <ComboBox  x:Name="EastingCombo" Grid.Row="2" Grid.Column="1" IsEditable="True" />
+
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Text="Northing parameter:"/>
+        <ComboBox  x:Name="NorthingCombo" Grid.Row="4" Grid.Column="1" IsEditable="True" />
+
+        <TextBlock Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Text="Elevation (Z) parameter:"/>
+        <ComboBox  x:Name="ElevationCombo" Grid.Row="6" Grid.Column="1" IsEditable="True" />
+
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+            <Button Width="100" Margin="0,0,8,0" Click="Ok_Click">OK</Button>
+            <Button Width="100" Click="Cancel_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>
